@@ -1,0 +1,11 @@
+//
+//  default.metallib
+//  FrameWork
+//
+//  Created by Noah Moller on 11/2/24.
+//
+
+#include <metal_stdlib>
+using namespace metal;
+
+

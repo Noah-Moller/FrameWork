@@ -6,6 +6,21 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CD0B3C022CD6120F00D98561 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0B3BFB2CD6120F00D98561 /* Preview Assets.xcassets */; };
+		CD0B3C032CD6120F00D98561 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0B3BFD2CD6120F00D98561 /* Assets.xcassets */; };
+		CD0B3C042CD6120F00D98561 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B3BFE2CD6120F00D98561 /* ContentView.swift */; };
+		CD0B3C052CD6120F00D98561 /* FrameWorkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B3C002CD6120F00D98561 /* FrameWorkApp.swift */; };
+		CD0B3C072CD612F600D98561 /* NewFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B3C062CD612F600D98561 /* NewFileView.swift */; };
+		CD0B3C0C2CD62CF400D98561 /* default.metallib in Resources */ = {isa = PBXBuildFile; fileRef = CD0B3C0B2CD62CF400D98561 /* default.metallib */; };
+		CD0B3C0E2CD6301300D98561 /* CodeEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B3C0D2CD6301300D98561 /* CodeEditorView.swift */; };
+		CD0B3C102CD6303300D98561 /* FileDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B3C0F2CD6303300D98561 /* FileDocument.swift */; };
+		CD0B3C122CD63E6700D98561 /* SyntaxHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B3C112CD63E6700D98561 /* SyntaxHighlighter.swift */; };
+		CD0B3C142CD63EE500D98561 /* CodeCompletionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B3C132CD63EE500D98561 /* CodeCompletionManager.swift */; };
+		CD0B3C162CD63F2000D98561 /* CompletionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B3C152CD63F2000D98561 /* CompletionListView.swift */; };
+		CD0B3C182CD63F3A00D98561 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B3C172CD63F3A00D98561 /* Coordinator.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		CD0B3BDF2CD611FF00D98561 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,14 +42,23 @@
 		CD0B3BCD2CD611FC00D98561 /* FrameWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrameWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0B3BDE2CD611FF00D98561 /* FrameWorkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrameWorkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0B3BE82CD611FF00D98561 /* FrameWorkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrameWorkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD0B3BFB2CD6120F00D98561 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CD0B3BFD2CD6120F00D98561 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD0B3BFE2CD6120F00D98561 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CD0B3BFF2CD6120F00D98561 /* FrameWork.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FrameWork.entitlements; sourceTree = "<group>"; };
+		CD0B3C002CD6120F00D98561 /* FrameWorkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameWorkApp.swift; sourceTree = "<group>"; };
+		CD0B3C062CD612F600D98561 /* NewFileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFileView.swift; sourceTree = "<group>"; };
+		CD0B3C082CD61CF900D98561 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CD0B3C0B2CD62CF400D98561 /* default.metallib */ = {isa = PBXFileReference; lastKnownFileType = "archive.metal-library"; path = default.metallib; sourceTree = "<group>"; };
+		CD0B3C0D2CD6301300D98561 /* CodeEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeEditorView.swift; sourceTree = "<group>"; };
+		CD0B3C0F2CD6303300D98561 /* FileDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDocument.swift; sourceTree = "<group>"; };
+		CD0B3C112CD63E6700D98561 /* SyntaxHighlighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxHighlighter.swift; sourceTree = "<group>"; };
+		CD0B3C132CD63EE500D98561 /* CodeCompletionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeCompletionManager.swift; sourceTree = "<group>"; };
+		CD0B3C152CD63F2000D98561 /* CompletionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionListView.swift; sourceTree = "<group>"; };
+		CD0B3C172CD63F3A00D98561 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		CD0B3BCF2CD611FC00D98561 /* FrameWork */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = FrameWork;
-			sourceTree = "<group>";
-		};
 		CD0B3BE12CD611FF00D98561 /* FrameWorkTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = FrameWorkTests;
@@ -75,7 +99,7 @@
 		CD0B3BC42CD611FC00D98561 = {
 			isa = PBXGroup;
 			children = (
-				CD0B3BCF2CD611FC00D98561 /* FrameWork */,
+				CD0B3C012CD6120F00D98561 /* FrameWork */,
 				CD0B3BE12CD611FF00D98561 /* FrameWorkTests */,
 				CD0B3BEB2CD611FF00D98561 /* FrameWorkUITests */,
 				CD0B3BCE2CD611FC00D98561 /* Products */,
@@ -92,6 +116,35 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		CD0B3BFC2CD6120F00D98561 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CD0B3BFB2CD6120F00D98561 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CD0B3C012CD6120F00D98561 /* FrameWork */ = {
+			isa = PBXGroup;
+			children = (
+				CD0B3C082CD61CF900D98561 /* Info.plist */,
+				CD0B3C002CD6120F00D98561 /* FrameWorkApp.swift */,
+				CD0B3BFE2CD6120F00D98561 /* ContentView.swift */,
+				CD0B3C062CD612F600D98561 /* NewFileView.swift */,
+				CD0B3C0D2CD6301300D98561 /* CodeEditorView.swift */,
+				CD0B3C132CD63EE500D98561 /* CodeCompletionManager.swift */,
+				CD0B3C152CD63F2000D98561 /* CompletionListView.swift */,
+				CD0B3C172CD63F3A00D98561 /* Coordinator.swift */,
+				CD0B3C112CD63E6700D98561 /* SyntaxHighlighter.swift */,
+				CD0B3C0F2CD6303300D98561 /* FileDocument.swift */,
+				CD0B3C0B2CD62CF400D98561 /* default.metallib */,
+				CD0B3BFF2CD6120F00D98561 /* FrameWork.entitlements */,
+				CD0B3BFD2CD6120F00D98561 /* Assets.xcassets */,
+				CD0B3BFC2CD6120F00D98561 /* Preview Content */,
+			);
+			path = FrameWork;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +159,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				CD0B3BCF2CD611FC00D98561 /* FrameWork */,
 			);
 			name = FrameWork;
 			packageProductDependencies = (
@@ -212,6 +262,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD0B3C0C2CD62CF400D98561 /* default.metallib in Resources */,
+				CD0B3C022CD6120F00D98561 /* Preview Assets.xcassets in Resources */,
+				CD0B3C032CD6120F00D98561 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +289,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD0B3C142CD63EE500D98561 /* CodeCompletionManager.swift in Sources */,
+				CD0B3C0E2CD6301300D98561 /* CodeEditorView.swift in Sources */,
+				CD0B3C042CD6120F00D98561 /* ContentView.swift in Sources */,
+				CD0B3C122CD63E6700D98561 /* SyntaxHighlighter.swift in Sources */,
+				CD0B3C162CD63F2000D98561 /* CompletionListView.swift in Sources */,
+				CD0B3C072CD612F600D98561 /* NewFileView.swift in Sources */,
+				CD0B3C102CD6303300D98561 /* FileDocument.swift in Sources */,
+				CD0B3C052CD6120F00D98561 /* FrameWorkApp.swift in Sources */,
+				CD0B3C182CD63F3A00D98561 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +463,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FrameWork/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -428,6 +491,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FrameWork/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
