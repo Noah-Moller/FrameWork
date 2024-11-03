@@ -18,8 +18,9 @@ struct LineNumberedTextEditor: NSViewRepresentable {
     }
 
     func makeNSView(context: Context) -> NSScrollView {
+        let scrollView = NSScrollView()
         let textView = NSTextView()
-
+        
         textView.isEditable = true
         textView.delegate = context.coordinator
         textView.font = NSFont.monospacedSystemFont(ofSize: NSFont.systemFontSize, weight: .regular)
@@ -43,42 +44,42 @@ struct LineNumberedTextEditor: NSViewRepresentable {
             .font: NSFont.monospacedSystemFont(ofSize: NSFont.systemFontSize, weight: .regular),
             .foregroundColor: NSColor.textColor
         ]
-        let attributedString = NSAttributedString(string: text, attributes: defaultAttributes)
-        textStorage.setAttributedString(attributedString)
-
+        
+        textView.string = text
+        
         let syntaxHighlighter = SyntaxHighlighter(textStorage: textStorage, language: language)
         context.coordinator.syntaxHighlighter = syntaxHighlighter
-        syntaxHighlighter.highlight()
-
+        
         context.coordinator.textStorage = textStorage
-
-        let scrollView = NSScrollView()
+        context.coordinator.textView = textView
+        
         scrollView.documentView = textView
         scrollView.hasVerticalScroller = true
         scrollView.hasHorizontalScroller = false
         scrollView.autohidesScrollers = true
         scrollView.drawsBackground = false
 
+        syntaxHighlighter.highlight()
+        
+        DispatchQueue.main.async {
+            self.lineCount = textView.calculateLineCount()
+        }
+
         return scrollView
     }
 
     func updateNSView(_ nsView: NSScrollView, context: Context) {
-        if let textView = nsView.documentView as? NSTextView,
-           let textStorage = context.coordinator.textStorage {
-
-            if textStorage.string != text {
-                let defaultAttributes: [NSAttributedString.Key: Any] = [
-                    .font: NSFont.monospacedSystemFont(ofSize: NSFont.systemFontSize, weight: .regular),
-                    .foregroundColor: NSColor.textColor
-                ]
-                let attributedString = NSAttributedString(string: text, attributes: defaultAttributes)
-                textStorage.setAttributedString(attributedString)
-
-                context.coordinator.syntaxHighlighter?.highlight()
-            }
-            DispatchQueue.main.async {
-                self.lineCount = textView.calculateLineCount()
-            }
+        guard let textView = context.coordinator.textView,
+              textView.string != text else { return }
+        
+        let selectedRanges = textView.selectedRanges
+        textView.string = text
+        textView.selectedRanges = selectedRanges
+        
+        context.coordinator.syntaxHighlighter?.highlight()
+        
+        DispatchQueue.main.async {
+            self.lineCount = textView.calculateLineCount()
         }
     }
 
@@ -86,18 +87,19 @@ struct LineNumberedTextEditor: NSViewRepresentable {
         var parent: LineNumberedTextEditor
         var syntaxHighlighter: SyntaxHighlighter?
         var textStorage: NSTextStorage?
+        var textView: NSTextView?
 
         init(_ parent: LineNumberedTextEditor) {
             self.parent = parent
         }
 
         func textDidChange(_ notification: Notification) {
-            if let textView = notification.object as? NSTextView {
-                self.parent.text = textView.string
-                DispatchQueue.main.async {
-                    self.parent.lineCount = textView.calculateLineCount()
-                    self.syntaxHighlighter?.highlight()
-                }
+            guard let textView = notification.object as? NSTextView else { return }
+            parent.text = textView.string
+            
+            DispatchQueue.main.async {
+                self.parent.lineCount = textView.calculateLineCount()
+                self.syntaxHighlighter?.highlight()
             }
         }
     }
